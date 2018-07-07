@@ -1,0 +1,1562 @@
+html {
+    background: white;
+}
+body {
+    margin: 0 auto;
+    background: white;
+    width: 710px;
+    height: 450px;
+    position: relative;
+    margin-top: 150px;
+}
+#content-wrapper {
+    font-size: 12px;
+    font-style: sans-serif;
+    background: white;
+    width: 710px;
+    height: 450px;
+    position: absolute;
+    align-self: center;
+}
+.module1,
+.module2,
+.module3,
+.module4 {
+    position: relative;
+    background: white;
+    width: 50%;
+    height: 50%;
+}
+.module1 {
+    background: black;
+}
+.staticLabels1 {
+    position: absolute;
+    background: black;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+    height: 30px;
+}
+.topRowLabels {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    font-size: 10px;
+}
+#viewLabel {
+    position: absolute;
+    color: white;
+    left: 35px;
+}
+#displayLabel {
+    position: absolute;
+    color: white;
+    left: 35px;
+}
+.bottomRowLabels {
+    position: absolute;
+    width: 100%;
+    top: 15px;
+    font-size: 10px;
+}
+.topClickableLabels {
+    position: relative;
+    width: 100%;
+}
+#edgeLabel,
+#topLabel,
+#side3DLabel,
+#streamLinesLabel,
+#movingLabel,
+#frozenLabel,
+#geometryLabel {
+    color: aqua;
+    cursor: pointer;
+}
+#edgeLabel {
+    position: absolute;
+    left: 90px;
+}
+#topLabel {
+    position: absolute;
+    left: 135px;
+}
+#side3DLabel {
+    position: absolute;
+    left: 170px;
+}
+#findLabel {
+    position: absolute;
+    color: red;
+    left: 220px;
+    cursor: pointer;
+}
+.bottomClickableLabels {
+    position: relative;
+    width: 100%;
+    height: 15px;
+}
+#streamLinesLabel {
+    position: absolute;
+    left: 80px;
+}
+#movingLabel {
+    position: absolute;
+    left: 150px;
+}
+#frozenLabel {
+    position: absolute;
+    left: 200px;
+}
+#geometryLabel {
+    position: absolute;
+    left: 240px;
+}
+.staticSlider1 {
+    position: relative;
+    background: black;
+    height: 125px;
+    width: 32px;
+    top: 20px;
+}
+#zoomLabel {
+    position: absolute;
+    color: rgb(0, 255, 0);
+    background: black;
+    top: 110px;
+    text-align: center;
+    left: 2px;
+    font-size: 10px;
+}
+input[type=range][orient=vertical] {
+    -webkit-appearance: none;
+}
+input[type=range][orient=vertical]:focus {
+    outline: none;
+}
+input[type=range][orient=vertical] {
+    position: absolute;
+    background: black;
+    height: 100px;
+    left: 5px;
+}
+input[type=range][orient=vertical]::-moz-range-thumb {
+    background: rgb(0, 255, 0);
+    width: 14px;
+    height: 2px;
+    cursor: grab;
+}
+input[type=range][orient=vertical]::-moz-range-track {
+    background: rgb(0, 255, 0);
+    width: 2px;
+    height: 100px;
+}
+input[type=range][orient=vertical]::-webkit-slider-thumb {
+    background: rgb(0, 255, 0);
+    width: 14px;
+    height: 2px;
+    cursor: grab;
+}
+input[type=range][orient=vertical]::-webkit-slider-runnable-track {
+    background: rgb(0, 255, 0);
+    width: 2px;
+    height: 100px;
+}
+input[type=range][orient=vertical]::-ms-thumb {
+    background: rgb(0, 255, 0);
+    width: 14px;
+    height: 2px;
+    cursor: grab;
+}
+input[type=range][orient=vertical]::-ms-track {
+    background: rgb(0, 255, 0);
+    width: 2px;
+    height: 100px;
+}
+.canvas-sheet1 {
+    position: absolute;
+    height: 185px;
+    width: 89%;
+    top: 35px;
+    left: 35px
+}
+#canvas1 {
+    background: black;
+}
+.module2 {
+    left: 50%;
+    bottom: 50%;
+}
+.module3 {
+    background: white;
+    bottom: 50%;
+}
+.flight-wrapper,
+.shape-wrapper,
+.size-wrapper,
+.analysis-wrapper,
+.selectPlot-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.flight-wrapper {
+    visibility: hidden;
+}
+.staticLabels4Flight,
+.list3,
+.flightSliders,
+.flightFields {
+  position: absolute;
+}
+.staticLabels4Flight {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+.flightFields {
+  z-index: 1;
+  height: 87%;
+  width: 100%;
+  top: 13%;
+}
+#flightTestLabel,
+#speedLabel,
+#speedLabelUnit,
+#altitudeLabel,
+#altitudeLabelUnit,
+#pressureLabel,
+#pressureLabelUnit,
+#densityLabel,
+#densityLabelUnit,
+#dynamicPressureLabel,
+#dynamicPressureLabelUnit,
+#temperatureLabel,
+#temperatureLabelUnit,
+#viscosityLabel,
+#viscosityLabelUnit,
+#relativeHumidityLabel {
+  position: absolute;
+}
+#flightTestLabel {
+  left: 15%;
+  top: 2%;
+  color: blue;
+}
+#speedLabel {
+  top: 18%;
+  left: 3%;
+}
+#speedLabelUnit {
+  top: 18%;
+  left: 12%;
+}
+#altitudeLabel {
+  top: 35%;
+  left: 3%;
+}
+#altitudeLabelUnit {
+  top: 35%;
+  left: 15%;
+}
+#pressureLabel {
+  top: 53%;
+  left: 3%;
+}
+#pressureLabelUnit {
+  top: 53%;
+  left: 14%;
+}
+#densityLabel {
+  top: 70%;
+  left: 3%;
+}
+#densityLabelUnit {
+  top: 70%;
+  left: 12%;
+}
+#dynamicPressureLabel {
+  left: 1%;
+  top: 87%;
+}
+#dynamicPressureLabelUnit {
+  top: 87%;
+  left: 15%;
+}
+#temperatureLabel {
+  top: 53%;
+  left: 52%;
+}
+#temperatureLabelUnit {
+  top: 53%;
+  left: 62%;
+}
+#viscosityLabel {
+  top: 70%;
+  left: 52%;
+}
+#viscosityLabelUnit {
+  top: 70%;
+  left: 59%;
+}
+#relativeHumidityLabel{
+  top: 87%;
+  left: 52%;
+}
+#speedFlightInput,
+#altitudeFlightInput,
+#pressureFlightInput,
+#densityFlightInput,
+#dynamicPressureFlightOutput,
+#temperatureFlightInput,
+#viscosityFlightInput,
+#relativeHumidityFlightInput {
+  position: absolute;
+  left: 23%;
+  width: 25%;
+  height: 15%;
+}
+#altitudeFlightInput {
+  top: 20%;
+}
+#pressureFlightInput {
+  top: 40%;
+}
+#densityFlightInput {
+  top: 60%;
+}
+#dynamicPressureFlightOutput {
+  top: 80%;
+  height: 18%;
+  width: 26.5%;
+  background: black;
+  color: yellow;
+}
+#temperatureFlightInput {
+  left: 72%;
+  top: 40%;
+}
+#viscosityFlightInput {
+  left: 72%;
+  top: 60%;
+}
+#relativeHumidityFlightInput {
+  left: 72%;
+  top: 80%;
+}
+.flightSliders {
+  z-index: 2;
+  width: 50%;
+  height: 34%;
+  left: 50%;
+  top: 13%;
+}
+#speedFlightSlider {
+  width: 97%;
+  left: 1%;
+  height: 45%;
+  background: rgb(207, 207, 207);
+}
+#speed-custom-handle {
+  width: 1.3em;
+  height: 3em;
+  cursor: grab;
+}
+#altitudeFlightSlider {
+  width: 97%;
+  left: 1%;
+  top: 3px;
+  height: 45%;
+  background: rgb(207, 207, 207);
+}
+#altitude-custom-handle {
+  width: 1.3em;
+  height: 3em;
+  cursor: grab;
+}
+.list3 {
+  z-index: 3;
+  width: 50%;
+  height: 8%;
+  left: 50%;
+  top: 1%;
+}
+#flightTestConditionList {
+  width: 100%;
+  color: blue;
+  font-size: 10px;
+  height: 100%;
+}
+.shape-wrapper {
+    visibility: hidden;
+}
+.list4 {
+  position: absolute;
+  width: 50%;
+  background: blue;
+  height: 7%;
+  left: 50%;
+  top: 3px;
+  z-index: 3;
+}
+#shapeList {
+  position: absolute;
+  font-size: 10px;
+  color: blue;
+  width: 100%;
+}
+.airfoilShape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.staticLabels4ShapeAirfoil,
+.shapeSliderAirfoil,
+.shapeFieldsAirfoil,
+.buttons4Shape {
+  position: absolute;
+}
+.staticLabels4ShapeAirfoil {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#airfoilShapeLabel,
+#angleLabel,
+#camberLabel,
+#thicknessLabel,
+#basicShapesLabel {
+  position: absolute;
+  font-size: 10px;
+}
+#airfoilShapeLabel {
+  color: blue;
+  top: 4px;
+  left: 20%;
+}
+#angleLabel {
+  top: 19%;
+  left: 5%;
+}
+#camberLabel {
+  top: 37%;
+  left: 5%;
+}
+#thicknessLabel {
+  top: 54%;
+  left: 5%;
+}
+#basicShapesLabel {
+  top: 74%;
+  left: 5%;
+}
+.shapeSlidersAirfoil {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 2;
+  top: 15%;
+  left: 50%;
+}
+#angleShapeSlider,
+#camberShapeSlider,
+#thicknessShapeSlider {
+  position: absolute;
+  width: 97%;
+  left: 1%;
+  height: 25%;
+  background: rgb(207, 207, 207);
+}
+#angleShapeSlider {
+  top: 1%;
+}
+#camberShapeSlider {
+  top: 36%;
+}
+#thicknessShapeSlider {
+  top: 71%;
+}
+#angle-custom-handle,
+#camber-custom-handle,
+#thickness-custom-handle {
+  position: absolute;
+  height: 2.5em;
+  width: 1.3em;
+}
+.shapeFieldsAirfoil {
+  position: absolute;
+  width: 25%;
+  height: 50%;
+  z-index: 2;
+  left: 22%;
+  top: 15%;
+}
+#angleShapeInput,
+#camberShapeInput,
+#thicknessShapeInput {
+  position: absolute;
+  width: 96%;
+  height: 25%;
+  font-size: 10px;
+}
+#camberShapeInput {
+  top: 35%;
+}
+
+#thicknessShapeInput {
+  top: 70%;
+}
+.buttons4Shape {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  z-index: 2;
+  top: 70%;
+}
+#symmetricButton,
+#highCamberButton,
+#flatPlateButton,
+#flatBottomButton,
+#negativeCamberButton,
+#ellipseButton,
+#curvePlateButton {
+  position: absolute;
+  cursor: pointer;
+  color: blue;
+  font-size: 10px;
+  width: 25%;
+  height: 45%;
+  background: white;
+}
+#symmetricButton {
+  left: 25%;
+}
+#highCamberButton {
+  left: 50%;
+}
+#flatPlateButton {
+  left: 75%;
+}
+#flatBottomButton {
+  top: 48%;
+}
+#negativeCamberButton {
+  top: 48%;
+  left: 25%;
+}
+#ellipseButton {
+  top: 48%;
+  left: 50%;
+}
+#curvePlateButton {
+  left: 75%;
+  top: 48%;
+}
+.cylinderOrBallShape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: 0;
+}
+.shapeSliderCylinder {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 2;
+  top: 15%;
+  left: 50%;
+}
+#spinShapeSlider,
+#radiusShapeSlider,
+#spanShapeSlider {
+  position: absolute;
+  width: 97%;
+  left: 1%;
+  height: 25%;
+  background: rgb(207, 207, 207);
+}
+#spinShapeSlider {
+  top: 1%;
+}
+#radiusShapeSlider {
+  top: 36%;
+}
+#spanShapeSlider {
+  top: 71%;
+}
+#spin-custom-handle,
+#radius-custom-handle,
+#spanShape-custom-handle {
+  position: absolute;
+  height: 2.5em;
+  width: 1.3em;
+}
+.shapeFieldsCylinder {
+  position: absolute;
+  width: 25%;
+  height: 50%;
+  z-index: 2;
+  left: 22%;
+  top: 15%;
+}
+#spinShapeInput,
+#radiusShapeInput,
+#spanShapeInput {
+  position: absolute;
+  width: 96%;
+  height: 25%;
+  font-size: 10px;
+}
+#radiusShapeInput {
+  top: 35%;
+}
+
+#spanShapeInput {
+  top: 70%;
+}
+.staticLabels4ShapeCylinder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#cylinderBallLabel,
+#spinLabel,
+#spinLabelUnit,
+#radiusLabel,
+#radiusLabelUnit,
+#spanShapeLabel,
+#spanShapeLabelUnit {
+  position: absolute;
+  font-size: 10px;
+}
+#cylinderBallLabel {
+  color: blue;
+  top: 4px;
+  left: 15%;
+}
+#spinLabel {
+  top: 19%;
+  left: 5%;
+}
+#spinLabelUnit {
+  top: 19%;
+  left: 14%;
+}
+#radiusLabel {
+  top: 37%;
+  left: 5%;
+}
+#radiusLabelUnit {
+  top: 37%;
+  left: 14%;
+}
+#spanShapeLabel {
+  top: 54%;
+  left: 5%;
+}
+#spanShapeLabelUnit {
+  top: 54%;
+  left: 14%;
+}
+.size-wrapper {
+    visibility: hidden;
+}
+.staticLabels4Size {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+#wingSizeLabel {
+  position: absolute;
+  color: blue;
+  font-size: 10px;
+  left: 18%;
+  top: 5%;
+}
+#chordLabel,
+#spanLabel,
+#areaLabel,
+#aspectRatioLabel,
+#chordLabelUnit,
+#spanLabelUnit,
+#areaLabelUnit {
+  position: absolute;
+  font-size: 10px;
+}
+#chordLabel {
+  left: 10%;
+  top: 26%;
+}
+#chordLabelUnit {
+  left: 18%;
+  top: 26%;
+}
+#spanLabel {
+  left: 10%;
+  top: 47%;
+}
+#spanLabelUnit {
+  left: 16.5%;
+  top: 47%;
+}
+#areaLabel {
+  left: 10%;
+  top: 68.5%;
+}
+#areaLabelUnit {
+  left: 19.5%;
+  top: 68.5%;
+}
+#aspectRatioLabel {
+  left: 10%;
+  top: 88%;
+}
+.sizeFields {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#chordSizeInput,
+#spanSizeInput,
+#areaSizeInput,
+#aspectRatioSizeOutput {
+  position: absolute;
+  width: 25%;
+  height: 18%;
+}
+#chordSizeInput,
+#spanSizeInput,
+#areaSizeInput {
+  width: 24%;
+  font-size: 10px;
+  left: 25%;
+}
+#chordSizeInput {
+  top: 19%;
+}
+#spanSizeInput {
+  top: 40%;
+}
+#areaSizeInput {
+  top: 61%;
+}
+#aspectRatioSizeOutput {
+  background: black;
+  color: yellow;
+  top: 82%;
+  left: 25%;
+}
+.sizeSliders {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  z-index: 1;
+}
+#chordSizeSlider,
+#spanSizeSlider,
+#areaSizeSlider {
+  position: absolute;
+  width: 90%;
+  height: 19%;
+  left: 5%;
+  background: rgb(200, 200, 200);
+}
+#chordSizeSlider {
+  top: 19.5%;
+}
+#spanSizeSlider {
+  top: 40.5%;
+}
+#areaSizeSlider {
+  top: 61.5%;
+}
+#chord-custom-handle,
+#span-custom-handle,
+#area-custom-handle {
+  height: 3.6em;
+  width: 1.3em;
+  position: absolute;
+}
+.analysis-wrapper {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+.staticLabels4Analysis,
+.buttons4Analysis {
+  position: absolute;
+}
+.staticLabels4Analysis {
+  width: 33%;
+  height: 100%;
+  z-index: 0;
+}
+#liftAnalysisLabel,
+#arLiftCorrectionLabel,
+#inducedDragLabel,
+#reNumberCorrectionLabel,
+#dragOfBallLabel {
+  position: absolute;
+  text-align: right;
+  font-size: 10px;
+}
+#liftAnalysisLabel {
+  top: 5%;
+  left: 45%;
+}
+#arLiftCorrectionLabel {
+  top: 20%;
+  left: 25%;
+}
+#inducedDragLabel {
+  top: 34%;
+  left: 45%;
+}
+#reNumberCorrectionLabel {
+  top: 47%;
+  left: 38%;
+}
+#dragOfBallLabel {
+  top: 74%;
+  left: 50%;
+}
+.buttons4Analysis{
+  height: 100%;
+  width: 66%;
+  left: 33%;
+}
+.conditionalAnalysisButtons,
+.geometrySettingAnalysisButtons {
+  position: absolute;
+}
+.conditionalAnalysisButtons {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.geometrySettingAnalysisButtons {
+  width: 100%;
+  top: 70%;
+  height: 30%;
+  z-index: 2;
+}
+#stallModelButton,
+#idealFlowButton,
+#arOnButton,
+#arOffButton,
+#idOnButton,
+#idOffButton,
+#reOnButton,
+#reOffButton,
+#smoothBallButton,
+#roughBallButton,
+#golfBallButton {
+  position: absolute;
+  background: white;
+  width: 50%;
+  cursor: pointer;
+}
+#stallModelButton,
+#idealFlowButton,
+#arOnButton,
+#arOffButton,
+#idOnButton,
+#idOffButton,
+#reOnButton,
+#reOffButton {
+  color: blue;
+  height: 13%;
+  font-size: 10px;
+}
+#stallModelButton {
+  top: 2%;
+}
+#idealFlowButton {
+  left: 51%;
+  top: 2%;
+}
+#arOnButton {
+  top: 16%;
+}
+#arOffButton {
+  left: 51%;
+  top: 16%;
+}
+#idOnButton {
+  top: 30%;
+}
+#idOffButton {
+  left: 51%;
+  top: 30%;
+}
+#reOnButton {
+  top: 44%;
+}
+#reOffButton {
+  left: 51%;
+  top: 44%;
+}
+#smoothBallButton,
+#roughBallButton,
+#golfBallButton {
+  color: red;
+  height: 45%;
+  font-size: 10px;
+}
+#roughBallButton {
+  left: 51%;
+}
+#golfBallButton {
+  top: 50%;
+}
+.selectPlot-wrapper {
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+}
+.staticLabels4SelectPlot {
+  position: absolute;
+  height: 45%;
+  width: 100%;
+  z-index: 0;
+  font-size: 10px;
+}
+#selectPlotLabel {
+  position: absolute;
+  left: 47%;
+  top: 10%;
+}
+#surfaceLabel {
+  color: blue;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+}
+.surfaceButtons {
+  width: 50%;
+  height: 30%;
+  position: absolute;
+  z-index: 1;
+  left: 30%;
+  top: 15%;
+}
+#plotPressureButton,
+#plotVelocityButton,
+#plotDragPolarButton {
+  position: absolute;
+  width: 45%;
+  height: 45%;
+  font-size: 10px;
+  color: blue;
+  background: white;
+  cursor: pointer;
+}
+#plotPressureButton {
+left: 1%;
+}
+#plotVelocityButton {
+  left: 48%;
+}
+#plotDragPolarButton {
+  top: 50%;
+  left: 1%;
+}
+.select-plot-average-day {
+  position: absolute;
+  width: 100%;
+  height: 55%;
+  top: 45%;
+  z-index: 0;
+}
+.list5 {
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  height: 100%;
+}
+#liftVS1List {
+  position: absolute;
+  top: 10%;
+  font-size: 10px;
+  color: red;
+  width: 100%;
+}
+#liftVS2List {
+  position: absolute;
+  color: red;
+  font-size: 10px;
+  width: 100%;
+  top: 35%;
+}
+.topRowButtons {
+  position: absolute;
+  width: 70%;
+  left: 30%;
+  height: 30%;
+  z-index: 1;
+}
+#plotAngleButton,
+#plotCamberButton,
+#plotThicknessButton {
+  position: absolute;
+  font-size: 10px;
+  color: red;
+  background: white;
+  left: 1%;
+  width: 32%;
+  height: 78%;
+  top: 15%;
+  cursor: pointer;
+}
+#plotCamberButton {
+  left: 34.5%;
+}
+#plotThicknessButton {
+  left: 68%;
+}
+.bottomRowButtons {
+  position: absolute;
+  width: 70%;
+  left: 30%;
+  height: 70%;
+  top: 30%;
+  z-index: 1;
+}
+#plotSpeedButton,
+#plotAltitudeButton,
+#plotWingAreaButton,
+#plotDensityButton {
+  position: absolute;
+  font-size: 10px;
+  background: white;
+  color: red;
+  cursor: pointer;
+  width: 32%;
+  left: 1%;
+  height: 33%;
+}
+#plotAltitudeButton {
+  left: 34.5%;
+}
+#plotWingAreaButton {
+  top: 37%;
+}
+#plotDensityButton {
+  top: 36.5%;
+  left: 34.5%;
+}
+.module4 {
+    background: white;
+    left: 50%;
+    bottom: 100%;
+}
+.graph-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+#graph {
+    position: absolute;
+    background: white;
+    width: 98%;
+    height: 98%;
+    top: 3px;
+    left: 3px;
+}
+.geometryAndData-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background: white;
+}
+#geometryAndDataOutputField {
+    position: absolute;
+    background: red;
+    width: 98%;
+    height: 98%;
+    border-style: double;
+    border-width: 2px;
+    border-color: black;
+    left: 2px;
+    top: 1px;
+    text-align: left;
+    color: black;
+    background: rgb(230, 224, 250);
+    overflow: scroll;
+}
+.probe-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+#probeLabel {
+    position: absolute;
+    text-align: center;
+    color: red;
+    font-size: 12px;
+    left: 20%;
+    top: 5%;
+}
+.buttons4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#probeVelocityButton,
+#probePressureButton,
+#probeSmokeButton,
+#gageOnButton {
+    width: 50%;
+    cursor: pointer;
+    font-size: 10px;
+}
+#probeVelocityButton,
+#probePressureButton,
+#probeSmokeButton {
+    position: absolute;
+    height: 23%;
+    background: white;
+    color: blue;
+}
+#probeVelocityButton {
+    top: 25%;
+}
+#probePressureButton {
+    top: 50%;
+}
+#probeSmokeButton {
+    top: 75%;
+}
+#gageOnButton {
+    position: absolute;
+    background: red;
+    color: white;
+    height: 10%;
+    left: 50%;
+    top: 0px;
+}
+.canvas-sheet2 {
+    position: absolute;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    height: 90%;
+    width: 50%;
+    left: 50%;
+    top: 10%;
+}
+#canvas2 {
+    background: black;
+    position: absolute;
+}
+.gages-wrapper {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+.staticLabels4 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+#outputLabel,
+#liftLabel,
+#dragLabel,
+#liftLabelValue,
+#liftLabelUnit,
+#liftLabelTemp,
+#dragLabelTemp,
+#dragLabelValue,
+#dragLabelUnit,
+#dragLabelTemp,
+#topPower,
+#bottomPower {
+    color: white;
+    font-size: 10px;
+    position: absolute;
+}
+#tally0,
+#tally1,
+#tally2,
+#tally3,
+#tally4,
+#tally5,
+#tally6,
+#tally7,
+#tally8,
+#tally9,
+#tally10,
+#tally11,
+#tally12,
+#tally13,
+#tally14,
+#tally15,
+#tally16,
+#tally17,
+#tally18,
+#tally19,
+#tally20,
+#tally21,
+#tallyNum0,
+#tallyNum1,
+#tallyNum2,
+#tallyNum3,
+#tallyNum4,
+#tallyNum5,
+#tallyNum6,
+#tallyNum7,
+#tallyNum8,
+#tallyNum9,
+#tallyNum10 {
+    position: absolute;
+    font-size: 12px;
+    color: yellow;
+}
+#tally0,
+#tally11,
+#tallyNum0 {
+    left: 1%;
+}
+#tally1,
+#tally12,
+#tallyNum1 {
+    left: 6%;
+}
+#tally2,
+#tally13,
+#tallyNum2 {
+    left: 11%;
+}
+#tally3,
+#tally14,
+#tallyNum3 {
+    left: 16%;
+}
+#tally4,
+#tally15,
+#tallyNum4 {
+    left: 21%;
+}
+#tally5,
+#tally16,
+#tallyNum5 {
+    left: 26%;
+}
+#tally6,
+#tally17,
+#tallyNum6 {
+    left: 31%;
+}
+#tally7,
+#tally18,
+#tallyNum7 {
+    left: 36%;
+}
+#tally8,
+#tally19,
+#tallyNum8 {
+    left: 41%;
+}
+#tally9,
+#tally20,
+#tallyNum9 {
+    left: 46%;
+}
+#tally10,
+#tally21,
+#tallyNum10 {
+    left: 51%;
+}
+#tally0,
+#tally1,
+#tally2,
+#tally3,
+#tally4,
+#tally5,
+#tally6,
+#tally7,
+#tally8,
+#tally9,
+#tally10 {
+    top: 32%;
+}
+#tallyNum0,
+#tallyNum1,
+#tallyNum2,
+#tallyNum3,
+#tallyNum4,
+#tallyNum5,
+#tallyNum6,
+#tallyNum7,
+#tallyNum8,
+#tallyNum9,
+#tallyNum10 {
+    top: 37%;
+}
+#tally11,
+#tally12,
+#tally13,
+#tally14,
+#tally15,
+#tally16,
+#tally17,
+#tally18,
+#tally19,
+#tally20,
+#tally21 {
+    top: 42%;
+}
+#outputLabel {
+    left: 5px;
+}
+#liftLabel,
+#dragLabel {
+    left: 50px;
+}
+#liftLabel,
+#liftLabelValue,
+#liftLabelTemp,
+#liftLabelUnit {
+    top: 23%;
+}
+#dragLabel,
+#dragLabelValue,
+#dragLabelTemp,
+#dragLabelUnit {
+    top: 54%;
+}
+#liftLabelValue,
+#dragLabelValue {
+    left: 80px;
+}
+#liftLabelUnit,
+#dragLabelUnit {
+    left: 135px;
+}
+#liftLabelTemp,
+#dragLabelTemp {
+    left: 110px;
+}
+#topPower {
+    color: purple;
+    left: 36%;
+    top: 19%;
+}
+#bottomPower {
+    color: red;
+    left: 36%;
+    top: 50%;
+}
+.backgroundSheet {
+    background: black;
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    z-index: 1;
+}
+#meter0,
+#meter1 {
+    z-index: 2;
+    position: absolute;
+    height: 4%;
+    width: 1%;
+}
+#meter0 {
+    top: 33%;
+    width: 20%;
+    background: purple;
+}
+#meter1 {
+    top: 43%;
+    width: 5%;
+    background: red;
+}
+.staticLabels2 {
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#applicationName,
+#inputTitle,
+#unitListLabel,
+#applicationVersion,
+#outputTitle,
+#reynoldsLabel,
+#liftToDragRatioLabel {
+    position: absolute;
+}
+#applicationName,
+#outputTitle {
+    color: red;
+}
+#applicationName {
+    left: 20px;
+    text-align: center;
+    top: 8px;
+}
+#unitListLabel {
+    left: 150px;
+    top: 8px;
+}
+#inputTitle {
+    color: blue;
+    text-align: center;
+    left: 30px;
+    top: 40px;
+}
+#outputTitle {
+    text-align: right;
+    left: 320px;
+    top: 40px;
+}
+#applicationVersion {
+    left: 130px;
+    top: 40px;
+}
+#reynoldsLabel {
+    left: 215px;
+    top: 170px;
+    text-align: right;
+}
+#liftToDragRatioLabel {
+    left: 225px;
+    top: 202px;
+    text-align: right;
+}
+.list2 {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+#unitList,
+#liftOrClList,
+#dragOrCdList {
+    position: relative;
+    width: 83px;
+    font-size: 10px;
+}
+#unitList {
+    top: 6px;
+    left: 52%;
+}
+#liftOrClList {
+    right: 80px;
+    top: 168px;
+}
+#dragOrCdList {
+    right: 165px;
+    top: 200px;
+}
+.outputFields2 {
+    position: absolute;
+    z-index: 2;
+    height: 0px;
+}
+#liftOrClOutputField,
+#dragOrCdOutputField,
+#reynoldsOutputField,
+#liftOrDragRatioOutputField {
+    position: absolute;
+    width: 83px;
+    height: 30px;
+    margin: 1px;
+    background: black;
+    color: yellow;
+}
+#liftOrClOutputField {
+    top: 162px;
+    left: 95px;
+}
+#liftOrDragRatioOutputField {
+    top: 194px;
+    left: 270px;
+}
+#dragOrCdOutputField {
+    top: 194px;
+    left: 95px;
+}
+#reynoldsOutputField {
+    top: 162px;
+    left: 270px;
+}
+.buttons2 {
+    position: absolute;
+    z-index: 3;
+    height: 0px;
+}
+.inputButtons {
+    position: relative;
+    height: 95px;
+    width: 175px;
+    top: 65px;
+    left: 6px;
+}
+#flightButton,
+#shapeButton,
+#sizeButton,
+#analysisButton,
+#selectPlotButton {
+    color: blue;
+    text-align: center;
+    width: 83px;
+    height: 30px;
+    background: white;
+    margin: 1px;
+    cursor: pointer;
+    font-size: 10px;
+}
+.outputButtons {
+    position: relative;
+    height: 95px;
+    bottom: 30px;
+    width: 175px;
+    left: 180px;
+}
+#probeButton,
+#gagesButton,
+#geometryButton,
+#dataButton,
+#plotButton {
+    color: red;
+    text-align: center;
+    width: 83px;
+    height: 30px;
+    background: white;
+    margin: 1px;
+    cursor: pointer;
+    font-size: 10px;
+}
+#selectPlotButton {
+    position: relative;
+    left: 88px;
+    cursor: pointer;
+}
+.resetButton {
+    position: absolute;
+    display: inline-block;
+    left: 270px;
+    top: 0px;
+}
+#resetButton {
+    color: white;
+    background: red;
+    text-align: center;
+    width: 83px;
+    height: 30px;
+    margin: 1px;
+    cursor: pointer;
+    font-size: 10px;
+}

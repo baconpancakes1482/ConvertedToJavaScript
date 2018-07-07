@@ -1,0 +1,919 @@
+
+html,
+body,
+div {
+    position: relative;
+}
+#content-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 400px;
+    position: absolute;
+}
+.input {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    left: 50%;
+}
+#list {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+}
+.widget {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#type {
+    font-size: 10px;
+    position: absolute;
+    top: 16%;
+    left: 1%;
+}
+#Altitude {
+    position: absolute;
+    width: 75%;
+    height: 20%;
+    top: 10%;
+}
+#Gamma {
+    position: absolute;
+    width: 75%;
+    height: 20%;
+    top: 30%;
+}
+#alt {
+    position: absolute;
+    font-size: 10px;
+    left: 25%;
+    top: 30%;
+}
+#gam {
+    position: absolute;
+    font-size: 10px;
+    left: 25%;
+    top: 30%;
+}
+#altitude {
+    position: absolute;
+    font-size: 10px;
+    left: 80%;
+    top: 10%;
+}
+#userAltitude {
+    position: absolute;
+    z-index: 1;
+    font-size: 10px;
+    width: 40%;
+    left: 53%;
+    height: 70%;
+    top: 7%;
+}
+#userGamma {
+    position: absolute;
+    z-index: 1;
+    text-align: left;
+    font-size: 10px;
+    width: 40%;
+    left: 53%;
+    height: 70%;
+    top: 7%;
+}
+#userMach {
+    position: absolute;
+    z-index: 1;
+    text-align: left;
+    font-size: 10px;
+    width: 40%;
+    left: 53%;
+    height: 70%;
+    top: 7%;
+}
+#userVelocity {
+    position: absolute;
+    z-index: 1;
+    text-align: left;
+    font-size: 10px;
+    width: 40%;
+    left: 53%;
+    height: 70%;
+    top: 7%;
+}
+#Velocity {
+    position: absolute;
+    width: 75%;
+    height: 20%;
+    top: 50%;
+}
+#Mach {
+    position: absolute;
+    width: 75%;
+    height: 20%;
+    top: 70%;
+}
+#velocity {
+    position: absolute;
+    font-size: 10px;
+    top: 34%;
+    left: 80%;
+}
+#selectedOutput {
+    position: absolute;
+    width: 30%;
+    height: 8%;
+    outline-width: 2px;
+    outline-color: rgb(255,255,255);
+    outline-style: solid;
+    background: black;
+    color: yellow;
+    top: 55%;
+    left: 40.5%;
+    font-size: 12px;
+    line-height: 33px;
+}
+#selectedOutputUnit {
+    position: absolute;
+    font-size: 10px;
+    left: 80%;
+    top: 58%;
+}
+#sliderBackground {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+#slider {
+    position: absolute;
+    height: 70%;
+    width: 0.3em;
+    left: 35%;
+    top: 15%;
+    z-index: 1;
+}
+.ui-slider-handle {
+    position: absolute;
+    z-index: 1;
+}
+#slider-custom-handle {
+    background: aqua;
+    width: 1em;
+    height: 0.2em;
+    cursor: grab;
+    z-index: 1;
+    margin-left: -0.1em;
+    margin-top: -0.2em;
+    margin-bottom: -0.2em;
+}
+#slider2 {
+    position: absolute;
+    width: 0.3em;
+    height: 70%;
+    left: 65%;
+    z-index: 1;
+    top: 15%;
+}
+#slider2-custom-handle {
+    background: orange;
+    width: 1em;
+    height: 0.2em;
+    z-index: 1;
+    cursor: grab;
+    margin-left: -0.1em;
+    margin-top: -0.2em;
+    margin-bottom: -0.2em;
+}
+#errorString {
+    color: white;
+    position: absolute;
+    background-color: red;
+    width: 8%;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 10px;
+    left:  50%;
+    top: 15%;
+}
+label {
+    position: absolute;
+    font-size: 10px;
+}
+label[for="unit"] {
+    left: 62%;
+    top: 2%;
+}
+label[for="planet"] {
+    left: 3%;
+    top: 2%;
+}
+label[for="output1"] {
+    top: 58%;
+    left: 2%;
+}
+label[for="output2"] {
+    top: 66%;
+    left: 30%;
+}
+#radioOptions {
+    position: absolute;
+    width: 50%;
+    height: 24%;
+    left: 50%;
+    top: 25%;
+}
+label[for="radio-1"] {
+    left: 28%;
+    top: 39%;
+}
+label[for="radio-2"] {
+    top: 89%;
+    left: 29%;
+}
+input {
+    border-style: ridge;
+    outline-color: black;
+}
+input[id="radio-1"] {
+    position: absolute;
+    z-index: 1;
+    left: 20%;
+    top: 35%;
+}
+input[id="radio-2"] {
+    position: absolute;
+    z-index: 1;
+    left: 20%;
+    top: 85%;
+}
+select {
+    position: absolute;
+    z-index: 1;
+    font-size: 10px;
+}
+select[name="unit"] {
+    width: 25%;
+    left: 70%;
+    top: 1%;
+}
+select[name="planet"] {
+    width: 25%;
+    top: 1%;
+    left: 15%;
+}
+select[name="output1"] {
+    position: absolute;
+    width: 20%;
+    top: 57%;
+    left: 20%;
+}
+select[name="output2"] {
+    position: absolute;
+    width: 30%;
+    left: 40%;
+    top: 65%;
+}
+.output {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    height: 100%;
+    color: black;
+}
+.outputData {
+    position: absolute;
+    width: 100%;
+    height:30%;
+    top: 70%;
+}
+.outputVar {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    color: yellow;
+    font-size: 10px;
+    left: 30%;
+}
+#staticTemperatureVar,
+#staticPressureVar,
+#densityVar,
+#speedOfSoundVar,
+#dynamicPressureVar,
+#forceRatioVar,
+#totalPressureVar,
+#totalTemperatureVar {
+    position: absolute;
+    background: black;
+    width: 160px;
+    left: 5%;
+    text-indent: 20%;
+}
+#staticTemperatureVar {
+    top: 0%;
+}
+#staticPressureVar {
+    top: 12%;
+}
+#densityVar {
+    top: 24%;
+}
+#speedOfSoundVar {
+    top: 36%;
+}
+#dynamicPressureVar {
+    top: 48%;
+}
+#forceRatioVar {
+    top: 60%;
+}
+#totalPressureVar {
+    top: 72%;
+}
+#totalTemperatureVar {
+  top: 84%;
+}
+.outputUnits {
+    position: absolute;
+    color: yellow;
+    width: 30%;
+    height: 100%;
+    left: 60%;
+}
+#staticTemp,
+#staticPress,
+#density,
+#speedOfSound,
+#dynamicPress,
+#forceRatio,
+#totalPress,
+#totalTemp {
+    position: absolute;
+    font-size: 10px;
+}
+#staticTemp {
+    top: 0%;
+}
+#staticPress {
+    top: 12%;
+}
+#density {
+    top: 24%;
+}
+#speedOfSound {
+    top: 36%;
+}
+#dynamicPress {
+    top: 48%;
+}
+#forceRatio {
+    top: 60%;
+}
+#totalPress {
+  top: 72%;
+}
+#totalTemp {
+  top: 84%;
+}
+.outputTitle {
+    position: absolute;
+    background: white;
+    width: 30%;
+    font-size: 10px;
+    height: 100%;
+    text-align: right;
+}
+#statT,
+#statP,
+#dens,
+#speed,
+#dynP,
+#forR,
+#totP,
+#totT {
+    position: absolute;
+}
+#statT {
+    top: 0%;
+    left: 54%;
+}
+#statP {
+    top: 12%;
+    left: 55%;
+}
+#dens {
+    top: 24%;
+    left: 69.5%;
+}
+#speed {
+    top: 36%;
+    left: 39%;
+}
+#dynP {
+    top: 48%;
+    left: 41.5%;
+}
+#forR {
+    top: 60%;
+    left: 55%;
+}
+#totP {
+    top: 72%;
+    left: 58%;
+}
+#totT {
+    top: 84%;
+    left: 56%;
+}
+.outputGraph {
+    position: absolute;
+    width: 100%;
+    height:30%;
+    top: 70%;
+}
+#atmosphericTemperature,
+#pressureGauge {
+  position: absolute;
+  font-size: 10px;
+}
+#pressureGauge {
+top: 65%;
+left: 68%;
+}
+#atmosphericTemperature {
+  top: 65%;
+  left: 35%;
+}
+#temperatureTitle {
+    color: red;
+    position: absolute;
+    text-align: center;
+    font-size: 10px;
+    left: 30%;
+    width: 15%;
+    top: 10%;
+}
+#pressureTitle {
+    color: red;
+    position: absolute;
+    text-align: center;
+    font-size: 10px;
+    left: 65%;
+    top: 10%;
+}
+#therometerFrame {
+    position: absolute;
+    background: white;
+    height: 80%;
+    width: 5%;
+    left: 20%;
+    outline-color: black;
+    border-top-style: ridge;
+    border-left-style: ridge;
+    border-right-style: ridge;
+    border-bottom-style: ridge;
+}
+#fluidParent {
+    position: absolute;
+    width: 5.5%;
+    height: 84%;
+    left: 20.5%;
+}
+.fluid {
+    position: absolute;
+    background: red;
+    width: 100%;
+    z-index: 0;
+}
+#pressureParent {
+    position: absolute;
+    width: 8%;
+    height: 100%;
+    left: 78%;
+}
+#pressureLine {
+    position: absolute;
+    background: yellow;
+    height: 2%;
+    width: 35%;
+    z-index: 3;
+}
+#pressureFrame {
+    position: absolute;
+    background: black;
+    width: 8%;
+    height: 95%;
+    outline-color: black;
+    border-style: ridge;
+    left: 78%;
+    z-index: 1;
+}
+.pressureImperialUI {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+}
+.pressureImperialUI,
+.pressureMetricUI,
+.pressureImperialUIMars,
+.pressureMetricUIMars {
+    position: absolute;
+    text-align: right;
+    color: yellow;
+    z-index: 0;
+}
+.pressureMetricUI {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.pressureImperialUIMars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.pressureMetricUIMars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#psi4,
+#psi3,
+#psi2,
+#psi1,
+#psi0 {
+    position: absolute;
+    font-size: 10px;
+    width: 100%;
+    border-bottom-style: solid;
+    border-width: thin;
+}
+#psi4 {
+  top: 0%;
+}
+#psi3 {
+  top: 20%;
+}
+#psi2 {
+  top: 40%;
+}
+#psi1 {
+  top: 60%;
+}
+#psi0 {
+    top: 80%;
+}
+#kPa4,
+#kPa3,
+#kPa2,
+#kPa1,
+#kPa0 {
+    position: absolute;
+    font-size: 10px;
+    width: 100%;
+    border-bottom-style: solid;
+    border-width: thin;
+}
+#kPa4 {
+  top: 0%;
+}
+#kPa3 {
+  top: 20%;
+}
+#kPa2 {
+  top: 40%;
+}
+#kPa1 {
+  top: 60%;
+}
+#kPa0 {
+top: 80%;
+}
+#psi9 {
+  position: absolute;
+  font-size: 10px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: thin;
+  top: 0%;
+}
+#psi8 {
+  position: absolute;
+  font-size: 10px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: thin;
+  top: 20%;
+}
+#psi7 {
+  position: absolute;
+  font-size: 10px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: thin;
+  top: 40%;
+}
+#psi6 {
+  position: absolute;
+  font-size: 10px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: thin;
+  top: 60%;
+}
+#psi5 {
+  position: absolute;
+  font-size: 10px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: thin;
+  top: 80%;
+}
+#kPa9 {
+  position: absolute;
+  font-size: 10px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: thin;
+  top: 0%;
+}
+#kPa8 {
+  position: absolute;
+  font-size: 10px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: thin;
+  top: 20%;
+}
+#kPa7 {
+  position: absolute;
+  font-size: 10px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: thin;
+  top: 40%;
+}
+#kPa6 {
+  position: absolute;
+  font-size: 10px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: thin;
+  top: 60%;
+}
+#kPa5 {
+  position: absolute;
+  font-size: 10px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: thin;
+  top: 80%;
+}
+#circle {
+    position: absolute;
+    background: red;
+    height: 35%;
+    width: 150%;
+    top: 85%;
+    border-radius: 100%;
+    right: -46%;
+    border-right-style: ridge;
+    border-left-style: ridge;
+    border-bottom-style: ridge;
+}
+#tick1,
+#tick2,
+#tick3,
+#tick4,
+#tick5 {
+    position: absolute;
+    text-align: center;
+    border-bottom-style: dotted;
+    width: 100%;
+    z-index: 1;
+    font-size: 8px;
+}
+#tick1 {
+  top: 0%;
+}
+#tick2 {
+  top: 17.5%;
+}
+#tick3 {
+  top: 35%;
+}
+#tick4 {
+  top: 52.5%;
+}
+#tick5 {
+  top: 70%;
+}
+.sliderUi {
+    position: absolute;
+    color: white;
+    font-style: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+}
+.imperialUI {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.metricUI {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#a,
+#b,
+#c,
+#d,
+#e,
+#f,
+#g,
+#h,
+#i,
+#j,
+#k,
+#l,
+#m,
+#_a,
+#_b,
+#_c,
+#_d,
+#_e,
+#_f,
+#_a2,
+#_b2,
+#_c2,
+#_d2 #_e2,
+#_f2,
+#_g2,
+#_h2,
+#_i2 {
+    color: white;
+    position: absolute;
+}
+#a,
+#b,
+#c,
+#d,
+#e,
+#f {
+    position: absolute;
+    left: 10%;
+}
+#a {
+    top: 13.5%;
+}
+#b {
+    top: 27.5%;
+}
+#c {
+    top: 41.5%;
+}
+#d {
+    top: 55.5%;
+}
+#e {
+    top: 69.5%;
+}
+#f {
+    top: 83.5%;
+}
+#_a,
+#_b,
+#_c,
+#_d,
+#_e,
+#_f {
+    position: absolute;
+    left: 80%;
+}
+#_a {
+  top: 13.5%;
+}
+#_b {
+        top: 27.5%;
+}
+#_c {
+      top: 41.5%;
+}
+#_d {
+  top: 55.5%;
+}
+#_e {
+    top: 69.5%;
+}
+#_f {
+    top: 83.5%;
+}
+#g,
+#h,
+#i,
+#j,
+#k,
+#l,
+#m {
+    position: absolute;
+    left: 10%;
+}
+#g {
+    top: 14.5%;
+}
+#h {
+    top: 26%;
+}
+#i {
+    top: 37.5%;
+}
+#j {
+    top: 49%;
+}
+#k {
+    top: 60.5%;
+}
+#l {
+    top: 72%;
+}
+#m {
+    top: 83.5%;
+}
+#_a2,
+#_b2,
+#_c2,
+#_d2,
+#_e2,
+#_f2,
+#_g2,
+#_h2,
+#_i2 {
+    position: absolute;
+    left: 80%;
+}
+#_a2 {
+    top: 15%;
+}
+#_b2 {
+    top: 23.5%;
+}
+#_c2 {
+    top: 32%;
+}
+#_d2 {
+    top: 40.5%;
+}
+#_e2 {
+    top: 49%;
+}
+#_f2 {
+    top: 57.5%;
+}
+#_g2 {
+    top: 66%;
+}
+#_h2 {
+    top: 75%;
+}
+#_i2 {
+    top: 83.5%;
+}
+#sliderTitle {
+    position: absolute;
+    text-align: left;
+    font-size: 14px;
+    top: 3%;
+    left: 5%;
+}
+#sliderTitle2 {
+    position: absolute;
+    text-align: left;
+    font-size: 14px;
+    left: 65%;
+    top: 3%;
+}
+#sliderUnit1 {
+    position: absolute;
+    left: 5%;
+    top: 8%;
+}
+#sliderUnit1_2 {
+    position: absolute;
+    left: 85%;
+    top: 8%;
+}
+#sliderUnit2_2 {
+    position: absolute;
+    left: 85%;
+    top: 8%;
+}
+#sliderUnit2 {
+    position: absolute;
+    left: 5%;
+    top: 8%;
+}

@@ -1,0 +1,84 @@
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+      <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" deter></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" deter></script>
+        <script src="script.js" type="text/javascript" deter></script>
+      <title>*Mach and Speed of Sound Calculator*</title>
+  </head>
+
+<body>
+  <!-- content-wrapper holds the app -->
+  <div id="content-wrapper">
+    <header>
+      <h1>Mach and Speed of Sound Calculator</h1>
+    </header>
+
+    <div id="container">
+      <div class="widget">
+        <div id="list">
+          <label for="unit">Units:</label>
+            <select class="check" name="unit" id="unit" >
+              <option value="0">Imperial Units</option>
+              <option value="1">Metric Units</option>
+            </select>
+            <label for="planet">Planet:</label>
+              <select name="planet" id="planet">
+                <option value="0">Earth</option>
+                <option value="1">Mars</option>
+              </select>
+          <div id="alT">
+            <label for="selection1"></label>
+            <select name="selection1" id="selection1">
+                <option value="0">Altitude</option>
+                <option value="1">Temperature</option>
+            </select>
+          </div>
+          <div id="spM">
+            <label for="selection2"></label>
+              <select name="selection2" id="selection2">
+                <option value="0">Speed</option>
+                <option value="1">Mach</option>
+              </select>
+          </div>
+       </div>
+      </div>
+        <button id="Calculation" style="cursor: pointer">Compute</button>
+    </div>
+
+    <div id="userInput0">
+      <div id="inputTitle">Input</div>
+        <div id="userInput1">
+          <input id="input1">
+        </div>
+        <div id="userInput2">
+          <input id="input2">
+        </div>
+
+        <div id="input1Unit"></div>
+        <div id="input2Unit"></div>
+    </div>
+
+    <div id="press">Press-></div>
+    <div id="output">
+      <div id="outputTitle">Output</div>
+      <div id="outputSpeed">Speed</div>
+      <div id="outputSoS">Speed of Sound</div>
+      <div id="outputMach">Mach</div>
+      <div id="output1"></div>
+      <div id="output2"></div>
+      <div id="output3"></div>
+      <div id="output1Unit"></div>
+      <div id="output2Unit"></div>
+    </div>
+
+  </div>
+</body>
+</html>

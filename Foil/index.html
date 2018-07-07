@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="presIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatibile" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.2.1.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" deter></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" deter></script>
+        <!-- Plotly.js -->
+      <script src="https://cdn.plot.ly/plotly-latest.min.js" deter></script>
+      <script src="https://code.jquery.com/qunit/qunit-2.2.1.js" deter></script>
+      <script src="script.js" type="text/javascript" deter></script>
+      <script src="tests.js" type="text/javascript" deter></script>
+
+    <title>Foil III</title>
+  </head>
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <div id="content-wrapper">
+      <div class="module1">
+        <div class="staticLabels1">
+            <div class="topRowLabels">
+              <div id="viewLabel">View: </div>
+                <div class="topClickableLabels">
+                  <div id="edgeLabel">Edge</div>
+                  <div id="topLabel">Top</div>
+                  <div id="side3DLabel">Side-3D</div>
+                </div>
+              <div id="findLabel">Find</div>
+            </div>
+            <div class="bottomRowLabels">
+              <div id="displayLabel">Display: </div>
+                <div class="bottomClickableLabels">
+                  <div id="streamLinesLabel">Streamlines</div>
+                  <div id="movingLabel">Moving</div>
+                  <div id="frozenLabel">Frozen</div>
+                  <div id="geometryLabel">Geometry</div>
+                </div>
+            </div>
+
+            <div class="staticSlider1">
+                <div id="zoomLabel">Zoom</div>
+                <input id="zoom" type="range" orient="vertical"/>
+            </div>
+        </div>
+            <div class="canvas-sheet1">
+                <canvas id="canvas1" height="185px" width="315px;">Your browser does not support canvas</canvas>
+            </div>
+      </div>
+      <div class="module2">
+        <div class="staticLabels2">
+          <div id="applicationName">FoilSim III</div>
+          <div id="inputTitle">Input</div>
+          <div id="unitListLabel">Units:</div>
+          <div id="applicationVersion">Student   Version  1.5b</div>
+          <div id="outputTitle">Output</div>
+          <div id="reynoldsLabel">Reynolds #</div>
+          <div id="liftToDragRatioLabel">L/D ratio</div>
+        </div>
+        <div class="buttons2">
+          <div class="inputButtons">
+            <button id="flightButton" value="0">Flight</button>
+            <button id="shapeButton" value="1">Shape</button>
+            <button id="sizeButton" value="2">Size</button>
+            <button id="analysisButton" value="3">Analysis</button>
+            <button id="selectPlotButton" value="4">Select Plot</button>
+          </div>
+          <div class="outputButtons">
+            <button id="probeButton" value="5">Probe</button>
+            <button id="gagesButton" value="6">Gages</button>
+            <button id="geometryButton" value="7">Geometry</button>
+            <button id="dataButton" value="8">Data</button>
+            <button id="plotButton" value="9">Plot</button>
+          </div>
+          <div class="resetButton">
+            <button id="resetButton" value="101">Reset</button>
+          </div>
+        </div>
+        <div class="list2">
+            <select name="unit" id="unitList">
+              <option value="0">Imperial</option>
+              <option value="1">Metric</option>
+            </select>
+            <select name="liftOrCl" id="liftOrClList">
+              <option value="0">Lift</option>
+              <option value="1">Cl</option>
+            </select>
+            <select name="dragOrCd" id="dragOrCdList">
+              <option value="0">Drag</option>
+              <option value="1">Cd</option>
+            </select>
+        </div>
+        <div class="outputFields2">
+          <div id="liftOrClOutputField"></div>
+          <div id="dragOrCdOutputField"></div>
+          <div id="reynoldsOutputField"></div>
+          <div id="liftOrDragRatioOutputField"></div>
+        </div>
+      </div>
+      <div class="module3">
+        <div class="flight-wrapper">
+          <div class="staticLabels4Flight">
+            <div id="flightTestLabel">Flight Test</div>
+            <div id="speedLabel">Speed-</div>
+            <div id="speedLabelUnit">mph</div>
+            <div id="altitudeLabel">Altitude-</div>
+            <div id="altitudeLabelUnit">ft</div>
+            <div id="pressureLabel">Press</div>
+            <div id="pressureLabelUnit">Ib/in2</div>
+            <div id="densityLabel">Dens</div>
+            <div id="densityLabelUnit">slug/ft3</div>
+            <div id="dynamicPressureLabel">Dyn Press</div>
+            <div id="dynamicPressureLabelUnit">Ib/ft2</div>
+            <div id="temperatureLabel">Temp. </div>
+            <div id="temperatureLabelUnit">F</div>
+            <div id="viscosityLabel">Visc</div>
+            <div id="viscosityLabelUnit">slug/ft-s</div>
+            <div id="relativeHumidityLabel">Rel Humid %</div>
+          </div>
+          <div class="list3">
+            <select name="flightTestList" id="flightTestConditionList">
+              <option value="0">Earth - Average Day</option>
+              <option value="1">Mars - Average Day</option>
+              <option value="2">Water-Const Density</option>
+              <option value="3">Specify Air T & P</option>
+              <option value="4">Specify Density or Viscosity</option>
+              <option value="5">Venus - Surface</option>
+            </select>
+          </div>
+          <div class="flightSliders">
+            <div id="speedFlightSlider">
+              <div id="speed-custom-handle" class="ui-slider-handle"></div>
+            </div>
+            <div id="altitudeFlightSlider">
+              <div id="altitude-custom-handle" class="ui-slider-handle"></div>
+            </div>
+          </div>
+          <div class="flightFields">
+            <input id="speedFlightInput"/>
+            <input id="altitudeFlightInput"/>
+            <input id="pressureFlightInput"/>
+            <input id="densityFlightInput"/>
+            <div id="dynamicPressureFlightOutput"></div>
+            <input id="temperatureFlightInput"/>
+            <input id="viscosityFlightInput"/>
+            <input id="relativeHumidityFlightInput"/>
+          </div>
+        </div>
+        <div class="shape-wrapper">
+          <div class="list4">
+            <select name="shapeList" id="shapeList">
+              <option value="0">Airfoil</option>
+              <option value="1">Ellipse</option>
+              <option value="2">Plate</option>
+              <option value="3">Cylinder</option>
+              <option value="4">Ball</option>
+            </select>
+          </div>
+          <div class="airfoilShape">
+            <div class="staticLabels4ShapeAirfoil">
+              <div id="airfoilShapeLabel">Airfoil Shape</div>
+              <div id="angleLabel">Angle-deg</div>
+              <div id="camberLabel">Camber-%c</div>
+              <div id="thicknessLabel">Thick-%crd</div>
+              <div id="basicShapesLabel">Basic Shapes:</div>
+            </div>
+            <div class="shapeSlidersAirfoil">
+              <div id="angleShapeSlider">
+                <div id="angle-custom-handle" class="ui-slider-handle"></div>
+              </div>
+              <div id="camberShapeSlider">
+                <div id="camber-custom-handle" class="ui-slider-handle"></div>
+              </div>
+              <div id="thicknessShapeSlider">
+                <div id="thickness-custom-handle" class="ui-slider-handle"></div>
+              </div>
+            </div>
+            <div class="shapeFieldsAirfoil">
+              <input id="angleShapeInput"/>
+              <input id="camberShapeInput"/>
+              <input id="thicknessShapeInput"/>
+            </div>
+            <div class="buttons4Shape">
+              <button id="symmetricButton" value="10">Symmetric</button>
+              <button id="highCamberButton" value="11">High Camber</button>
+              <button id="flatPlateButton" value="12">Flat Plate</button>
+              <button id="flatBottomButton" value="13">Flat Bottom</button>
+              <button id="negativeCamberButton" value="14">Neg. Camber</button>
+              <button id="ellipseButton" value="15">Ellipse</button>
+              <button id="curvePlateButton" value="16">Curve Plate</button>
+            </div>
+          </div>
+          <div class="cylinderOrBallShape">
+            <div class="staticLabels4ShapeCylinder">
+              <div id="cylinderBallLabel">Cylinder-Ball Input</div>
+              <div id="spinLabel">Spin</div>
+              <div id="spinLabelUnit">rpm</div>
+              <div id="radiusLabel">Radius</div>
+              <div id="radiusLabelUnit">ft</div>
+              <div id="spanShapeLabel">Span</div>
+              <div id="spanShapeLabelUnit">ft</div>
+            </div>
+            <div class="shapeSliderCylinder">
+              <div id="spinShapeSlider">
+                <div id="spin-custom-handle" class="ui-slider-handle"></div>
+              </div>
+              <div id="radiusShapeSlider">
+                <div id="radius-custom-handle" class="ui-slider-handle"></div>
+              </div>
+              <div id="spanShapeSlider">
+                <div id="spanShape-custom-handle" class="ui-slider-handle"></div>
+              </div>
+            </div>
+            <div class="shapeFieldsCylinder">
+              <input id="spinShapeInput"/>
+              <input id="radiusShapeInput"/>
+              <input id="spanShapeInput"/>
+            </div>
+          </div>
+        </div>
+        <div class="size-wrapper">
+           <div class="staticLabels4Size">
+            <div id="wingSizeLabel">Wing Size</div>
+            <div id="chordLabel">Chord-</div>
+            <div id="chordLabelUnit">ft</div>
+            <div id="spanLabel">Span-</div>
+            <div id="spanLabelUnit">ft</div>
+            <div id="areaLabel">Area-sq </div>
+            <div id="areaLabelUnit">ft</div>
+            <div id="aspectRatioLabel">Aspect Rat</div>
+          </div>
+          <div class="sizeFields">
+            <input id="chordSizeInput"/>
+            <input id="spanSizeInput"/>
+            <input id="areaSizeInput"/>
+            <div id="aspectRatioSizeOutput"></div>
+          </div>
+          <div class="sizeSliders">
+            <div id="chordSizeSlider">
+              <div id="chord-custom-handle" class="ui-slider-handle"></div>
+            </div>
+            <div id="spanSizeSlider">
+              <div id="span-custom-handle" class="ui-slider-handle"></div>
+            </div>
+            <div id="areaSizeSlider">
+              <div id="area-custom-handle" class="ui-slider-handle"></div>
+            </div>
+          </div>
+        </div>
+        <div class="analysis-wrapper">
+          <div class="staticLabels4Analysis">
+            <div id="liftAnalysisLabel">Lift Analysis:</div>
+            <div id="arLiftCorrectionLabel">AR Lift Correction:</div>
+            <div id="inducedDragLabel">Induced Drag:</div>
+            <div id="reNumberCorrectionLabel">Re # Correction:</div>
+            <div id="dragOfBallLabel">Drag of Ball</div>
+          </div>
+          <div class="buttons4Analysis">
+            <div class="conditionalAnalysisButtons">
+              <button id="stallModelButton" value="17">Stall Model</button>
+              <button id="idealFlowButton" value="18">Ideal Flow</button>
+              <button id="arOnButton" value="19">AR On</button>
+              <button id="arOffButton" value="20">AR Off</button>
+              <button id="idOnButton"value="21">ID On</button>
+              <button id="idOffButton" value="22">ID Off</button>
+              <button id="reOnButton" value="23">Re On</button>
+              <button id="reOffButton" value="24">Re Off</button>
+            </div>
+            <div class="geometrySettingAnalysisButtons">
+              <button id="smoothBallButton" value="25">Smooth Ball</button>
+              <button id="roughBallButton" value="26">Rough Ball</button>
+              <button id="golfBallButton" value="27">Golf Ball</button>
+            </div>
+          </div>
+        </div>
+        <div class="selectPlot-wrapper">
+          <div class="staticLabels4SelectPlot">
+            <div id="selectPlotLabel">Select Plot</div>
+            <div id="surfaceLabel">Surface</div>
+          </div>
+          <div class="surfaceButtons">
+            <button id="plotPressureButton" value="28">Pressure</button>
+            <button id="plotVelocityButton" value="29">Velocity</button>
+            <button id="plotDragPolarButton" value="30">Drag Polar</button>
+          </div>
+          <div class="select-plot-average-day">
+            <div class="list5">
+              <select name="liftVS1" id="liftVS1List">
+                <option value="0">Lift vs.</option>
+                <option value="1">Cl vs.</option>
+                <option value="2">Drag vs.</option>
+                <option value="3">Cd vs.</option>
+              </select>
+              <select name="liftVS2" id="liftVS2List">
+                <option value="0">Lift vs.</option>
+                <option value="1">Drag vs.</option>
+              </select>
+            </div>
+            <div class="topRowButtons">
+              <button id="plotAngleButton" value="31">Angle</button>
+              <button id="plotCamberButton" value="32">Camber</button>
+              <button id="plotThicknessButton" value="33">Thickness</button>
+            </div>
+            <div class="bottomRowButtons">
+              <button id="plotSpeedButton" value="34">Speed</button>
+              <button id="plotAltitudeButton" value="35">Altitude</button>
+              <button id="plotWingAreaButton" value="36">Wing Area</button>
+              <button id="plotDensityButton" value="37">Density</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="module4">
+        <div class="graph-wrapper">
+          <div id="graph"></div>
+        </div>
+        <div class="geometryAndData-wrapper">
+          <div id="geometryAndDataOutputField"></div>
+        </div>
+        <div class="probe-wrapper">
+          <div id="probeLabel">Probe</div>
+            <div class="buttons4">
+              <button id="probeVelocityButton" value="38">Velocity</button>
+              <button id="probePressureButton" value="39">Pressure</button>
+              <button id="probeSmokeButton" value="40">Smoke</button>
+              <button id="gageOnButton" value="102">OFF</button>
+            </div>
+            <div class="canvas-sheet2">
+              <canvas id="canvas2" height="100px" width="100px;"></canvas>
+            </div>
+        </div>
+        <div class="gages-wrapper">
+          <div class="staticLabels4">
+            <div id="outputLabel">Output</div>
+            <div id="liftLabel">Lift =</div>
+            <div id="dragLabel">Drag =</div>
+            <div id="liftLabelValue"> -0.000</div>
+            <div id="dragLabelValue"> -0.000</div>
+            <div id="liftLabelTemp"> X 10 </div>
+            <div id="dragLabelTemp"> X 10 </div>
+            <div id="topPower">-#</div>
+            <div id="bottomPower">-#</div>
+            <div id="liftLabelUnit"> Unit</div>
+            <div id="dragLabelUnit"> Unit</div>
+            <div id="tally0">|</div>
+            <div id="tally1">|</div>
+            <div id="tally2">|</div>
+            <div id="tally3">|</div>
+            <div id="tally4">|</div>
+            <div id="tally5">|</div>
+            <div id="tally6">|</div>
+            <div id="tally7">|</div>
+            <div id="tally8">|</div>
+            <div id="tally9">|</div>
+            <div id="tally10">|</div>
+            <div id="tally11">|</div>
+            <div id="tally12">|</div>
+            <div id="tally13">|</div>
+            <div id="tally14">|</div>
+            <div id="tally15">|</div>
+            <div id="tally16">|</div>
+            <div id="tally17">|</div>
+            <div id="tally18">|</div>
+            <div id="tally19">|</div>
+            <div id="tally20">|</div>
+            <div id="tally21">|</div>
+            <div id="tallyNum0">0</div>
+            <div id="tallyNum1">1</div>
+            <div id="tallyNum2">2</div>
+            <div id="tallyNum3">3</div>
+            <div id="tallyNum4">4</div>
+            <div id="tallyNum5">5</div>
+            <div id="tallyNum6">6</div>
+            <div id="tallyNum7">7</div>
+            <div id="tallyNum8">8</div>
+            <div id="tallyNum9">9</div>
+            <div id="tallyNum10">10</div>
+          </div>
+           <div class="backgroundSheet"></div>
+          <div id="meter0"></div>
+          <div id="meter1"></div>
+        </div>
+    </div>
+  </body>
+</html>

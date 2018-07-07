@@ -1,0 +1,226 @@
+<!doctype html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" deter></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" deter></script>
+  <script src="script.js" type="text/javascript" deter></script>
+
+  <title>AtmosModeler Simulator</title>
+
+</head>
+
+<body>
+
+  <header>
+    <h1></h1>
+  </header>
+
+  <div id="content-wrapper">
+    <div class="widget">
+        <div id="list">
+          <label for="unit">Units:</label>
+          <select name="unit" id="unit">
+            <option value="0">Imperial</option>
+            <option value="1">Metric</option>
+          </select>
+          <label for="planet">Planet:</label>
+          <select name="planet" id="planet">
+            <option value="0">Earth</option>
+            <option value="1">Mars</option>
+         </select>
+          <label for="output1">Select Output:</label>
+            <select name="output1" id="output1">
+              <option value="0">Air Temp.</option>
+              <option value="1">Pressure</option>
+              <option value="2">Density</option>
+              <option value="3">Speed of Sound</option>
+              <option value="4">Dynamic Press.</option>
+              <option value="5">Force Ratio</option>
+              <option value="6">Total Press.</option>
+              <option value="7">Total Temp.</option>
+            </select>
+          <label for="output2">Output:</label>
+          <select name="output2" id="output2">
+            <option value="0">Graph</option>
+            <option value="1">Data</option>
+          </select>
+        </div>
+        <div id="radioOptions">
+          <!--<fieldset>-->
+              <label for="radio-1">Velocity</label>
+                <input type="radio" name="radio-1" id="radio-1" value="0" checked="checked">
+              <label for="radio-2">Mach</label>
+                <input type="radio" name="radio-1" id="radio-2" value="1">
+          <!--</fieldset>-->
+        </div>
+        <div id="sliderBackground">
+          <div id="slider">
+            <div id="slider-custom-handle" class="ui-slider-handle"></div>
+          </div>
+          <div id="slider2">
+            <div id="slider2-custom-handle" class="ui-slider-handle"></div>
+          </div>
+          <div class="sliderUi">
+            <div id="sliderTitle">Slider for Altitude</div>
+            <div id="sliderTitle2">Slider for Velocity</div>
+            <div class="imperialUI">
+              <div id="sliderUnit1">(feet)</div>
+              <div id="a">100,000</div>
+              <div id="b">80,000</div>
+              <div id="c">60,000</div>
+              <div id="d">40,000</div>
+              <div id="e">20,000</div>
+              <div id="f">0</div>
+              <div id="sliderUnit1_2">(mph)</div>
+              <div id="_a">5000</div>
+              <div id="_b">4000</div>
+              <div id="_c">3000</div>
+              <div id="_d">2000</div>
+              <div id="_e">1000</div>
+              <div id="_f">0</div>
+            </div>
+
+          <div class="metricUI">
+            <div id="sliderUnit2">(meters)</div>
+              <div id="g">30,000</div>
+              <div id="h">25,000</div>
+              <div id="i">20,000</div>
+              <div id="j">15,000</div>
+              <div id="k">10,000</div>
+              <div id="l">5,000</div>
+              <div id="m">0</div>
+            <div id="sliderUnit2_2">(kmh)</div>
+              <div id="_a2">8000</div>
+              <div id="_b2">7000</div>
+              <div id="_c2">6000</div>
+              <div id="_d2">5000</div>
+              <div id="_e2">4000</div>
+              <div id="_f2">3000</div>
+              <div id="_g2">2000</div>
+              <div id="_h2">1000</div>
+              <div id="_i2">0</div>
+          </div>
+
+          </div>
+        </div>
+    </div>
+
+    <div class="input">
+      <div id="type">Type In</div>
+        <div id="Altitude">
+          <div id="alt">Altitude</div>
+          <input id="userAltitude"/>
+        </div>
+        <div id="Gamma">
+          <div id="gam">Gamma</div>
+          <input id="userGamma"/>
+        </div>
+        <div id="Velocity">
+          <input id="userVelocity">
+        </div>
+        <div id="Mach">
+          <input id="userMach" disabled="true">
+        </div>
+
+    </div>
+
+    <div class="output">
+        <div id="altitude"></div>
+        <div id="velocity"></div>
+        <div id="selectedOutput"></div>
+        <div id="selectedOutputUnit"></div>
+
+        <div class="outputData">
+          <div class="outputVar">
+              <div id="staticTemperatureVar"></div>
+              <div id="staticPressureVar"></div>
+              <div id="densityVar"></div>
+              <div id="speedOfSoundVar" ></div>
+              <div id="dynamicPressureVar"></div>
+              <div id="forceRatioVar"></div>
+              <div id="totalPressureVar"></div>
+              <div id="totalTemperatureVar"></div>
+          </div>
+            <div class="outputUnits">
+              <div id="staticTemp"></div>
+              <div id="staticPress"></div>
+              <div id="density"></div>
+              <div id="speedOfSound"></div>
+              <div id="dynamicPress"></div>
+              <div id="forceRatio"></div>
+              <div id="totalPress"></div>
+              <div id="totalTemp"></div>
+            </div>
+              <div class="outputTitle">
+                  <div id="statT">Static Temp</div>
+                  <div id="statP">Static Press</div>
+                  <div id="dens">Density</div>
+                  <div id="speed">Speed of Sound</div>
+                  <div id="dynP">Dynamic Press</div>
+                  <div id="forR">Force Ratio</div>
+                  <div id="totP">Total Press</div>
+                  <div id="totT">Total Temp</div>
+              </div>
+            </div>
+
+            <div class="outputGraph">
+              <div id="atmosphericTemperature"></div>
+              <div id="pressureGauge"></div>
+              <div id="therometerFrame">
+                <div id="circle"></div>
+                <div id="tick1">100</div>
+                <div id="tick2">50</div>
+                <div id="tick3">0</div>
+                <div id="tick4">-50</div>
+                <div id="tick5">-100</div>
+              </div>
+              <div id="temperatureTitle">Atmospheric Temperature</div>
+              <div id="pressureTitle">Pressure</div>
+              <div id="fluidParent">
+                <div class="fluid"></div>
+              </div>
+              <div id="pressureParent">
+                <div id="pressureLine"></div>
+              </div>
+              <div id="pressureFrame">
+                <div class="pressureImperialUI">
+                  <div id="psi4">20</div>
+                  <div id="psi3">15</div>
+                  <div id="psi2">10</div>
+                  <div id="psi1">5</div>
+                 <div id="psi0">0</div>
+                </div>
+                <div class="pressureMetricUI">
+                  <div id="kPa4">100</div>
+                  <div id="kPa3">75</div>
+                  <div id="kPa2">50</div>
+                  <div id="kPa1">25</div>
+                  <div id="kPa0">0</div>
+                </div>
+                <div class="pressureImperialUIMars">
+                  <div id="psi9">0.10</div>
+                  <div id="psi8">0.08</div>
+                  <div id="psi7">0.06</div>
+                  <div id="psi6">0.04</div>
+                  <div id="psi5">0.02</div>
+                </div>
+                <div class="pressureMetricUIMars">
+                  <div id="kPa9">0.70</div>
+                  <div id="kPa8">0.56</div>
+                  <div id="kPa7">0.42</div>
+                  <div id="kPa6">0.28</div>
+                  <div id="kPa5">0.14</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+            <div id="errorString"></div>
+        </div>
+
+</body>
+</html>

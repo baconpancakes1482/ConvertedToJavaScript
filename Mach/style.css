@@ -1,0 +1,227 @@
+
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+h1 {
+  position; absolute;
+  font-size: 12px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  font-weight: normal;
+}
+#container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#content-wrapper {
+  position: absolute;
+  align-self: center;
+  width: 500px;
+  height: 300px;
+}
+select {
+  color: red;
+  width: 25%;
+  font-size: 10px;
+  z-index: 1;
+}
+#unit {
+  position: absolute;
+  left: 55%;
+  top: 10%;
+}
+.widget {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#planet {
+  position: absolute;
+  left: 55%;
+  top: 17%;
+}
+label {
+  color: red;
+}
+label[for="unit"]{
+  position: absolute;
+  left: 49%;
+  font-size: 10px;
+  top: 11%;
+}
+label[for="planet"]{
+  position: absolute;
+  font-size: 10px;
+  left: 49%;
+  top: 18%;
+}
+#selection1,
+#selection2 {
+  position: absolute;
+  color: black;
+  left: 30%;
+}
+#selection1 {
+  top: 28%;
+}
+#selection2 {
+  top: 40%;
+}
+#input1Unit,
+#input2Unit {
+  position: relative;
+  color: black;
+  width: 80px;
+  left: 500px;
+}
+#input1Unit {
+  position: absolute;
+  left: 87%;
+  top: 29%;
+}
+#input2Unit {
+  position: absolute;
+  top: 40.5%;
+  left: 87%;
+}
+#input1,
+#input2 {
+  position: absolute;
+  font-size: 10px;
+  width: 97%;
+  height: 89%;
+  z-index: 1;
+}
+#input1 {
+  position: absolute;
+}
+#userInput0 {
+  position: absolute;
+  color: red;
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+}
+#userInput1 {
+  position: absolute;
+  width: 25%;
+  height: 12%;
+  left: 55%;
+  top: 25%;
+}
+#userInput2 {
+  position: absolute;
+  width: 25%;
+  height: 12%;
+  left: 55%;
+  top: 37%;
+
+}
+#inputTitle {
+  position: absolute;
+  top: 28%;
+  left: 10%;
+}
+#output {
+  position: absolute;
+  color: blue;
+  width: 100%;
+  height: 100%;
+}
+#outputTitle {
+  position: absolute;
+  font-size: 10px;
+  left: 10%;
+  top: 61%;
+}
+#press {
+  position: absolute;
+  font-size: 11px;
+  left: 47%;
+  top: 53%;
+}
+#Calculation {
+  color: white;
+  background: red;
+  font-size: 10px;
+  width: 25%;
+  height: 10%;
+  left: 55%;
+  top: 50%;
+  position: absolute;
+  z-index: 1;
+}
+#list{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#spM {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#alT {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#output1,
+#output2,
+#output3 {
+  background: black;
+  color: yellow;
+  width: 25%;
+  height: 12%;
+  position: absolute;
+  font-size: 10px;
+  left: 55%;
+}
+#output1 {
+  top: 61%;
+}
+#output2 {
+  top: 74%;
+}
+#output3 {
+  top: 87%;
+}
+#outputSpeed,
+#outputSoS,
+#outputMach {
+  color: black;
+  position: absolute;
+  text-align: center;
+  font-size: 10px;
+  left: 40%;
+}
+#outputSpeed {
+  top: 65%;
+}
+#outputSoS {
+  position: absolute;
+  top: 77%;
+  left: 36%;
+}
+#outputMach {
+  position: absolute;
+  top: 90%;
+}
+#output1Unit,
+#output2Unit {
+  position: absolute;
+  color: black;
+  font-size: 10px;
+  left: 87%;
+}
+#output1Unit {
+  top: 65%;
+}
+#output2Unit {
+  position: absolute;
+  top: 77%;
+}
